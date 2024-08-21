@@ -15,15 +15,15 @@
 > *-* *Système* *d'alarme* *pour* *signaler* *l'absence* *de* *lumière*
 > *ou* *la* *présence* *d'eau*
 
-*-* *Utilisation* *de* *la* *télécommande* *infrarouge* *pour* *une*
-*alerte* *lumineuse* *à* *l'aide* *de* *la* *LED* *RGB* *dans* *le*
-*cas* *d'une* *alerte* *datant* *de* *plusieurs* *minutes*
+>*-* *Utilisation* *de* *la* *télécommande* *infrarouge* *pour* *une*
+>*alerte* *lumineuse* *à* *l'aide* *de* *la* *LED* *RGB* *dans* *le*
+>*cas* *d'une* *alerte* *datant* *de* *plusieurs* *minutes*
 
 > *-* *Contrôle* *de* *l'allumage* *et* *de* *l'extinction* *des*
 > *défauts* *par* *des* *boutons-poussoirs*
 >
 > *-* *Alarme* *sonore* *grâce* *à* *un* *buzzer* *pour* *signaler* *un*
-> *défaut* *trois* *minutes* *après* *son* *activation* *-* *Affichage*
+> *défaut* *trois* *minutes* *après* *son* *activation*  *activation*
 > *des* *différents* *états* *et* *informations* *du* *système* *sur*
 > *un* *écran* *LCD*
 >
@@ -49,8 +49,8 @@
 > *-* *Structurer* *le* *code* *en* *différentes* *fonctions* *-*
 > *Établir* *les* *liens* *entre* *les* *fonctions*
 >
-> *-* *Résoudre* *les* *erreurs* **FINALISATION**
->
+> *-* *Résoudre* *les* *erreurs*
+ **FINALISATION**
 > *-* *Tester* *le* *programme*
 >
 > *-* *Rédiger* *une* *documentation*
@@ -72,30 +72,29 @@ Pour des travaux spécifiques dans un laboratoire, construire un robot
 contrôleur statique pour régulariser le comportement des opérateurs pour
 la bonne marche des systèmes qui y sont installés
 
-> **Matériel** **Utilisé**
+**Matériel** **Utilisé**
 
-\- Carte Arduino Uno
+> \- Carte Arduino Uno
 
-\- Capteur de luminosité (photorésistance ou capteur de lumière
-ambiante) - Ecran LCD pour l’affichage des informations
+> \- Capteur de luminosité (photorésistance ou capteur de lumière
+> ambiante) - Ecran LCD pour l’affichage des informations
 
-\- Steamy starter
+> \- Steamy starter
 
-\- capteur ultrason
+> \- capteur ultrason
 
-\- capteur infra rouge
+> \- capteur infra rouge
 
-\- Télécommande infrarouge
+> \- Télécommande infrarouge
 
--capteur de température et d’humidité
+> -capteur de température et d’humidité
 
 **Fonctionnement**
 
 Le système fonctionne de la façon suivante :
 
-**1.** **Démarrage** **et** **État** **du** **Système** - *Bouton*
-*Poussoir* *BP1*:
-
+**1.** **Démarrage** **et** **État** **du** **Système**
+> \- **Bouton** **Poussoir** **BP1** **:**
 > \- Appuyer sur BP1 pour démarrer le système.
 >
 > \- Une fois démarré, BP1 sert à acquitter les défauts après leur
@@ -107,34 +106,38 @@ Le système fonctionne de la façon suivante :
 
 2\. **Gestion** **des** **Défauts**
 
-\- Si un défaut (ex. présence d'eau) est détecté, le système se met en
+>\- Si un défaut (ex. présence d'eau) est détecté, le système se met en
 défaut.
 
-\- Pour que le système soit prêt à nouveau, le défaut doit être acquitté
+>\- Pour que le système soit prêt à nouveau, le défaut doit être acquitté
 en appuyant sur BP1, après avoir résolu le problème.
 
-\- Si le problème n'est pas résolu, l'acquittement n'est pas possible.
+>\- Si le problème n'est pas résolu, l'acquittement n'est pas possible.
 
-**3.** **Bouton** **Poussoir** **BP2**
+**3.** **allumage** **et** **redémarrage**
 
-\- Appui Simple: Redémarre le système. - Appui Long: Éteint le système.
+> \- **Bouton** **Poussoir** **BP2**
 
-> **4.** **Gestion** **des** **Alarmes**
+> \- Appui Simple: Redémarre le système.
+> > \- Appui Long: Éteint le système.
 
-\- Si un défaut n'est pas acquitté dans les 3 minutes, le buzzer
+ **4.** **Gestion** **des** **Alarmes**
+
+>\- Si un défaut n'est pas acquitté dans les 3 minutes, le buzzer
 retentit pour alerter l'opérateur.
 
-> **5.** **Détection** **d'Obstacles**
+ **5.** **Détection** **d'Obstacles**
 >
-> \- Capteur Ultrason: Vérifie la présence d'obstacles et indique la
-> distance avec la LED RGB : - Rouge : Distance \< 22 cm
+> \ Capteur Ultrason: Vérifie la présence d'obstacles et indique la
+> distance avec la LED RGB :
+> \- Rouge : Distance < 22 cm
 >
-> \- Orange : Distance entre 22 cm et 32 cm - Vert : Distance entre 32
-> cm et 40 cm
+> \- Orange : Distance entre 22 cm et 32 cm
+> \- Vert : Distance entre 32 cm et 40 cm
 
 **6.** **Télécommande** **Infrarouge**
 
-\- Permet de faire un jeu de lumière avec la LED RGB si le système est
+>\- Permet de faire un jeu de lumière avec la LED RGB si le système est
 en défaut et que le buzzer a retenti pendant 1 minute sans
 acquittement.<img src="./mfenhx4t.png"
 style="width:7.08681in;height:4.95486in" />
