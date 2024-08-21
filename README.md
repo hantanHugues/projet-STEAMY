@@ -75,18 +75,12 @@ la bonne marche des systèmes qui y sont installés
 **Matériel** **Utilisé**
 
 > \- Carte Arduino Uno
-
 > \- Capteur de luminosité (photorésistance ou capteur de lumière
 > ambiante) - Ecran LCD pour l’affichage des informations
-
 > \- Steamy starter
-
 > \- capteur ultrason
-
 > \- capteur infra rouge
-
 > \- Télécommande infrarouge
-
 > -capteur de température et d’humidité
 
 **Fonctionnement**
@@ -94,7 +88,7 @@ la bonne marche des systèmes qui y sont installés
 Le système fonctionne de la façon suivante :
 
 **1.** **Démarrage** **et** **État** **du** **Système**
-> \- **Bouton** **Poussoir** **BP1** **:**
+> \ **Bouton** **Poussoir** **BP1** **:**
 > \- Appuyer sur BP1 pour démarrer le système.
 >
 > \- Une fois démarré, BP1 sert à acquitter les défauts après leur
@@ -119,7 +113,7 @@ en appuyant sur BP1, après avoir résolu le problème.
 > \- **Bouton** **Poussoir** **BP2**
 
 > \- Appui Simple: Redémarre le système.
-> > \- Appui Long: Éteint le système.
+> \- Appui Long: Éteint le système.
 
  **4.** **Gestion** **des** **Alarmes**
 
@@ -128,21 +122,19 @@ retentit pour alerter l'opérateur.
 
  **5.** **Détection** **d'Obstacles**
 >
-> \ Capteur Ultrason: Vérifie la présence d'obstacles et indique la
-> distance avec la LED RGB :
+> **Capteur** **Ultrason****:** **Vérifie** **la** **présence** **d'****obstacles** **et** **indique** **la** **distance** avec** la** **LED** **RGB** **:**
+>
 > \- Rouge : Distance < 22 cm
 >
 > \- Orange : Distance entre 22 cm et 32 cm
+>
 > \- Vert : Distance entre 32 cm et 40 cm
 
 **6.** **Télécommande** **Infrarouge**
 
->\- Permet de faire un jeu de lumière avec la LED RGB si le système est
-en défaut et que le buzzer a retenti pendant 1 minute sans
-acquittement.<img src="./mfenhx4t.png"
-style="width:7.08681in;height:4.95486in" />
-
-> 7\. **Affichage** **sur** **Écran** **LCD** - État du Système :
+>\- Permet de faire un jeu de lumière avec la LED RGB si le système > > est en défaut et que le buzzer a retenti pendant 1 minute sans
+> acquittement
+**7.** **Affichage** **sur** **Écran** **LCD** - État du Système :
 >
 > \- "PRÊT": Pas de défaut, LED verte allumée.
 >
@@ -154,22 +146,25 @@ style="width:7.08681in;height:4.95486in" />
 
 **8.** **Types** **de** **Défauts**
 
-\- Absence de lumière : Risque d'accident. - Présence d'eau : Risque
-d'électrocution.
+>\- Absence de lumière : Risque d'accident. - Présence d'eau : Risque
+>d'électrocution.
 
 **Images** **des** **composants** **utilisés**
 
-> *<u>Module steamy starter avec les différents capteurs</u>*
->
-> *<u>Écran LCD_I2C</u>*
+*<u>Module steamy starter avec les différents capteurs</u>*
+> <img src="./mfenhx4t.png"
+style="width:7.08681in;height:4.95486in" />
 
-<img src="./14kmw1bw.png" style="width:5.75in;height:2.45833in" />
+*<u>Écran LCD_I2C</u>*
+
+> <img src="./14kmw1bw.png" style="width:5.75in;height:2.45833in" />
+
+*infrarouge</u>*
 
 > <img src="./ukwmr3np.png"
 > style="width:6.98611in;height:3.14375in" />*<u>Télécommande
-> infrarouge</u>*
->
-> **Code** **Arduino**
+
+**Code** **Arduino**
 >
 > Le code est structuré en plusieurs fonctions qui effectuent chaqu’un
 > une action bien précise. Ces fonctions sont ensuite appelées dans
