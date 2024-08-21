@@ -162,7 +162,7 @@ style="width:7.08681in;height:4.95486in" />
 *<u>Télécommande *infrarouge</u>*
 
 > <img src="./ukwmr3np.png"
-> style="width:6.98611in;height:3.14375in" /
+> style="width:6.98611in;height:3.14375in" />
 
 **Code** **Arduino**
 >
