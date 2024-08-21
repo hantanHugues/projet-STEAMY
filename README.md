@@ -563,10 +563,7 @@ void loop() {
 > mes problèmes.
 >
 **Image** **du** **prototype**
-
-<img src="./d3cvusrr.png" style="width:3.25in;height:7.21944in" />
-<img src="./vn0qqttw.png" style="width:3.25in;height:7.22361in" />
-
+<img src="./d3cvusrr.png" style="width:3.25in;height:7.21944in" /><img src="./vn0qqttw.png" style="width:3.25in;height:7.22361in" />
 **Conclusion**
 
 Ce projet simple et efficace permet de surveiller des environnements
