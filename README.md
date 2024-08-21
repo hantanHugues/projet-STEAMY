@@ -159,10 +159,10 @@ style="width:7.08681in;height:4.95486in" />
 
 > <img src="./14kmw1bw.png" style="width:5.75in;height:2.45833in" />
 
-*infrarouge</u>*
+*<u>Télécommande *infrarouge</u>*
 
 > <img src="./ukwmr3np.png"
-> style="width:6.98611in;height:3.14375in" />*<u>Télécommande
+> style="width:6.98611in;height:3.14375in" /
 
 **Code** **Arduino**
 >
@@ -520,14 +520,14 @@ void loop() {
 > La fonction loop() ci dessus est une boucle qui appelle la fonction
 > runing() lorsque le button_1 est appuié.
 >
-> **Résultats**
+**Résultats**
 >
 > Ce système permet de surveiller un environnement et émettre des
 > alarmes lorsque il y a des défauts , en fonction des conditions
 > ambiantes mesurées par les capteurs. Cela permet de surveiller
 > efficacement l’environnement dans un laboratoire .
 >
-> **Améliorations** **Possibles**
+ **Améliorations** **Possibles**
 >
 > \- Utilisation d'un capteur de luminosité plus précis (ex : capteur de
 > lumière ambiante I2C)
@@ -541,7 +541,7 @@ void loop() {
 > différents états de fonctionnement l’ors de l’activation de l’alerte
 > défaut.
 >
-> **Difficultés**
+**Difficultés**
 >
 > -J’ai eu du mal lors de l’implémentation du comportement du boutton 2
 > pour allumer et éteindre le robot. -J’ai aussi eu des difficultés pour
@@ -552,7 +552,7 @@ void loop() {
 > et àfaire fonctionner la fonction de récupération du signale de la
 > télécommande.
 >
-> **Résolution** **des** **difficultés**
+**Résolution** **des** **difficultés**
 >
 > pour résoudre mes problèmes j’ai lue la documentation sur le
 > fonctionnement du capteur IR et demendé de l’aide aux intelligences
@@ -561,7 +561,11 @@ void loop() {
 > mes problèmes.
 >
 **Image** **du** **prototype**
-<img src="./d3cvusrr.png" style="width:3.25in;height:7.21944in" /><img src="./vn0qqttw.png" style="width:3.25in;height:7.22361in" />
+<img src="./d3cvusrr.png" style="width:3.25in;height:7.21944in" />
+>
+><img src="./vn0qqttw.png" style="width:3.25in;height:7.22361in" />
+
+
 **Conclusion**
 
 Ce projet simple et efficace permet de surveiller des environnements
