@@ -30,11 +30,11 @@
 > *-* *Utilisation* *des* *LED* *rouges* *et* *vertes* *pour* *signaler*
 > *les* *différents* *états* *du* *robot*
 
-**SPÉCIFICATIONS** **TECHNIQUES** *-* *Langage* *:* *Arduino*
-
-> *-* *Environnement* *de* *développement* *:* *Arduino* *IDE* *-* *Kit*
-> *:* *STEAMY* *Starter*
-
+**SPÉCIFICATIONS** **TECHNIQUES** 
+> *-* *Langage* *:* *Arduino*
+> *-* *Environnement* *de* *développement* *:* *Arduino* *IDE*
+> *-* *Kit* *:* *STEAMY* *Starter*
+En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](./....)
 **PLAN** **DE** **TRAVAIL** **PRÉPARATION**
 
 > *-* *Comprendre* *les* *branchements* *et* *les* *différentes*
