@@ -561,9 +561,9 @@ void loop() {
 > mes problèmes.
 >
 **Image** **du** **prototype**
-> *Image* *1*
+ *Image* *1*
 <img src="./img1.jpg" style="width:3.25in;height:7.21944in" />
-> *image* *2*
+ *image* *2*
 <img src="./img2.jpg" style="width:3.25in;height:7.22361in" />
 
 **Conclusion**
