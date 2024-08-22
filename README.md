@@ -34,7 +34,7 @@
 > *-* *Langage* *:* *Arduino*
 > *-* *Environnement* *de* *développement* *:* *Arduino* *IDE*
 > *-* *Kit* *:* *STEAMY* *Starter*
-En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](./....)
+En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](./Projet STEAMY Starter.pdf)
 **PLAN** **DE** **TRAVAIL** **PRÉPARATION**
 
 > *-* *Comprendre* *les* *branchements* *et* *les* *différentes*
