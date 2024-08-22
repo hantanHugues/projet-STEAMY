@@ -34,7 +34,7 @@
 > 
 > *-* *Kit* *:* *STEAMY* *Starter*
 > 
-En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](https://techitall.co)
+En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](https://www.techitall.co/steamy-starter/)
 
 **PLAN** **DE** **TRAVAIL**
 
