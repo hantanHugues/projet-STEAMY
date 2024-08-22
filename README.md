@@ -228,12 +228,14 @@ IRrecv Irrecv(IRpin);
 > d’humidité et IRrecv pour recevoir les signaux infrarouge à partir de
 > la télécommande.
 ```
-bool shut_down = 0; //variable pour signaler l’arrêt du fonctionnement 
-int q=1;// variable qui signale un défaut 
-String error= "defaut"; //affiche un message d’erreur en cas de défaut 
- unsigned long compt_time=0;
- unsigned long total_compt_time=0;
- bool run;
+bool shut_down = 0; //variable pour signaler l'arret du fonctionnement 
+int q=1;// variable qui signale un defaut 
+String error= "defaut"; //affiche un message derreur en cas de defaut 
+ unsigned long compt_time=0;
+ unsigned long total_compt_time=0;
+ bool run;
+uint16_t received1 = 0;
+uint16_t received2 = 0;
 ```
 > Ici nous définissons quelques variables qui vont etre utilisées plus
 > tard dans le code.
@@ -401,48 +403,39 @@ unsigned long  defaut_humidite(){//gère la detrection de defaut par rapport a 
 > Cette fonction defaut_humidite fait exactement la même chose que la
 > précédente main dans le cas de l’humidité.
 ```
-void defaut(unsigned long time_var ){ //gère le comportement de l’appareil en cas de detection d'un defaut 
+void defaut(unsigned long time_var ){ //gère le comportement de l'appareii en cas de detection d'un defaut 
 if (digitalRead(button_1)== HIGH && q==1 ){
-  setColor(0, 0, 0);
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    String ligne_1 = error.substring(0, 10);
-    lcd.print(ligne_1);
-    lcd.setCursor(0, 1);
-    String ligne_2 = error.substring(10);
-    lcd.print(ligne_2);
-    digitalWrite(led_red, HIGH);
-    digitalWrite(led_green, LOW);
-    delay(100);
-    if ((millis()-time_var) >= 180000){
-      tone(buzzer, 330);
-    }
-    if((millis()- time_var)>= 240){
-      if ( IRcaptor()!=0 ){
-        while (digitalRead(button_1)== HIGH){
-        digitalRead(button_1);
-        setColor( 255, 0, 0);
-        delay(100);
-        setColor( 0,255, 0);
-        delay(100);
-        setColor( 0, 0,255);
-        delay(100);
-        }
-      }
-    }
-  } 
-    else{
-    digitalWrite(led_red, LOW);
-    digitalWrite(led_green, HIGH);
-    setColor(0, 0, 0);
-    noTone(buzzer);
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print(F("pret..."));
-    q=0;
-    }
-  }
-
+  setColor(0, 0, 0);
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    String ligne_1 = error.substring(0, 10);
+    lcd.print(ligne_1);
+    lcd.setCursor(0, 1);
+    String ligne_2 = error.substring(10);
+    lcd.print(ligne_2);
+    digitalWrite(led_red, HIGH);
+    digitalWrite(led_green, LOW);
+    delay(100);
+    
+    if ((millis()-time_var) >= 18000){
+      digitalWrite(buzzer, HIGH);
+    }
+    if ( (millis()- time_var) >= 24000){
+      IRcaptor();
+    }
+    
+  } 
+  else{
+    digitalWrite(led_red, LOW);
+    digitalWrite(led_green, HIGH);
+    setColor(0, 0, 0);
+    noTone(buzzer);
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print(F("pret..."));
+    q=0;
+    }
+  }
 ```
 > La fonction defaut() ci dessus implémente le comportement du robot en
 > fonction de la valeur de retour du button_1 lorsqu’un defaut est
@@ -451,21 +444,32 @@ if (digitalRead(button_1)== HIGH && q==1 ){
 > après l’etat de defaut grace a la valeur de retour de la fonction
 > defaut qui sexécute.
 ```
-uint16_t IRcaptor(){ // gère la réception des signaux par le capteur infra rouge 
-    uint16_t received{0};
-    if(IrReceiver.decode()){
-      IrReceiver.printIRResultShort(&Serial);
-      if( IrReceiver.decodedIRData.protocol == UNKNOWN){
-        IrReceiver.printIRResultRawFormatted(&Serial, true );
-      }
-      if(IrReceiver.decodedIRData.protocol== NEC){
-      received = IrReceiver.decodedIRData.command;
-      Serial.println(received, HEX);
-      }
-      IrReceiver.resume();
-    }
-    return received;
-  }
+uint16_t IRcaptor(){ // gère la reception des signaux par le capteur infra rouge 
+    uint16_t received = 0;
+    if(IrReceiver.decode()){
+      IrReceiver.printIRResultShort(&Serial);
+      if( IrReceiver.decodedIRData.protocol == UNKNOWN){
+        IrReceiver.printIRResultRawFormatted(&Serial, true );
+      }
+      if(IrReceiver.decodedIRData.protocol== NEC){
+      received = 0;
+      received = IrReceiver.decodedIRData.command;
+      Serial.println(received, HEX);
+      }
+      IrReceiver.resume();
+      if ( received != 0){
+          while (digitalRead(button_1)== HIGH){
+        digitalRead(button_1);
+        setColor( 255, 0, 0);
+        delay(100);
+        setColor( 0,255, 0);
+        delay(100);
+        setColor( 0, 0,255);
+        delay(100);
+        IrReceiver.resume();
+        }
+        }
+    }
 ```
 > Cette fonction permet de lire le signale envoyé par la télécommande
 > dans un premier temps il lis le signale et détermine si il utilise le
