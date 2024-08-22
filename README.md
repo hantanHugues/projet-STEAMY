@@ -19,19 +19,15 @@
 >*alerte* *lumineuse* *à* *l'aide* *de* *la* *LED* *RGB* *dans* *le*
 >*cas* *d'une* *alerte* *datant* *de* *plusieurs* *minutes*
 
-> *-* *Contrôle* *de* *l'allumage* *et* *de* *l'extinction* *des*
-> *défauts* *par* *des* *boutons-poussoirs*
+> *-* *Contrôle* *de* *l'allumage* *et* *de* *l'extinction* *des* *défauts* *par* *des* *boutons-poussoirs*
 >
-> *-* *Alarme* *sonore* *grâce* *à* *un* *buzzer* *pour* *signaler* *un*
-> *défaut* *trois* *minutes* *après* *son* *activation*  *activation*
-> *des* *différents* *états* *et* *informations* *du* *système* *sur*
-> *un* *écran* *LCD*
+> *-* *Alarme* *sonore* *grâce* *à* *un* *buzzer* *pour* *signaler* *un* *défaut* *trois* *minutes* *après* *son* *activation*  *activation*
+> *des* *différents* *états* *et* *informations* *du* *système* *sur* *un* *écran* *LCD*
 >
-> *-* *Utilisation* *des* *LED* *rouges
-* *et* *vertes* *pour* *signaler*
-> *les* *différents* *états* *du* *robot*
+> *-* *Utilisation* *des* *LED* *rouges* *et* *vertes* *pour* *signaler* *les* *différents* *états* *du* *robot*
 
-**SPÉCIFICATIONS** **TECHNIQUES** 
+**SPÉCIFICATIONS** **TECHNIQUES**
+
 > *-* *Langage* *:* *Arduino*
 > 
 > *-* *Environnement* *de* *développement* *:* *Arduino* *IDE*
@@ -40,22 +36,27 @@
 > 
 En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](https://techitall.co)
 
-**PLAN** **DE** **TRAVAIL** **PRÉPARATION**
+**PLAN** **DE** **TRAVAIL**
 
-> *-* *Comprendre* *les* *branchements* *et* *les* *différentes*
-> *utilisations* *du* *kit* *Starter* *STEAMY* *-* *Télécharger* *les*
-> *différentes* *bibliothèques* *dans* *l'éditeur* *de* *code*
+>**PRÉPARATION**
+
+> *-* *Comprendre* *les* *branchements* *et* *les* *différentes* *utilisations* *du* *kit* *Starter* *STEAMY*
+> 
+> *-* *Télécharger* *les* *différentes* *bibliothèques* *dans* *l'éditeur* *de* *code*
 >
 > *-* *Effectuer* *des* *tests* *sur* *les* *équipements*
-> **RÉALISATION**
->
+> 
+>**RÉALISATION**
+> 
 > *-* *Effectuer* *les* *branchements*
 >
-> *-* *Structurer* *le* *code* *en* *différentes* *fonctions* *-*
-> *Établir* *les* *liens* *entre* *les* *fonctions*
+> *-* *Structurer* *le* *code* *en* *différentes* *fonctions*
+> 
+> *-* *Établir* *les* *liens* *entre* *les* *fonctions*
 >
 > *-* *Résoudre* *les* *erreurs*
- **FINALISATION**
+> 
+>**FINALISATION**
 > *-* *Tester* *le* *programme*
 >
 > *-* *Rédiger* *une* *documentation*
