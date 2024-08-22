@@ -27,7 +27,8 @@
 > *des* *différents* *états* *et* *informations* *du* *système* *sur*
 > *un* *écran* *LCD*
 >
-> *-* *Utilisation* *des* *LED* *rouges* *et* *vertes* *pour* *signaler*
+> *-* *Utilisation* *des* *LED* *rouges
+* *et* *vertes* *pour* *signaler*
 > *les* *différents* *états* *du* *robot*
 
 **SPÉCIFICATIONS** **TECHNIQUES** 
@@ -59,8 +60,9 @@ En apprendre plus sur le kit et son utilisation dans la [documentation officiel 
 >
 > *-* *Rédiger* *une* *documentation*
 
-**LIVRABLES** *-* *Code* *source*
-
+**LIVRABLES**
+> *-* *Code* *source*
+> 
 > *-* *Rapport* *de* *projet*
 >
 > *-* *Prototype* *de* *robot* *contrôleur* *statique*
