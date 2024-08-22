@@ -32,9 +32,12 @@
 
 **SPÉCIFICATIONS** **TECHNIQUES** 
 > *-* *Langage* *:* *Arduino*
+> 
 > *-* *Environnement* *de* *développement* *:* *Arduino* *IDE*
+> 
 > *-* *Kit* *:* *STEAMY* *Starter*
-En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater](./Projet-STEAMY-Starter.pdf)
+> 
+En apprendre plus sur le kit et son utilisation dans la [documentation officiel du kit steamy Stater]([./Projet-STEAMY-Starter.pdf](https://techitall.co))
 
 **PLAN** **DE** **TRAVAIL** **PRÉPARATION**
 
