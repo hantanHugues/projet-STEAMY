@@ -561,12 +561,18 @@ void loop() {
 > mes problèmes.
 >
 **Image** **du** **prototype**
+
  *Image* *1*
+ 
 <img src="./img1.jpg" style="width:3.25in;height:7.21944in" />
+
  *image* *2*
+ 
 <img src="./img2.jpg" style="width:3.25in;height:7.22361in" />
 
+
 **Conclusion**
+
 Ce projet simple et efficace permet de surveiller des environnements
 sans nécessiter une forte présence humaine . Il peut être facilement
 adapté à différents types de surveillance et peut être amélioré avec des
