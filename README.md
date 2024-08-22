@@ -57,6 +57,7 @@ En apprendre plus sur le kit et son utilisation dans la [documentation officiel 
 > *-* *Résoudre* *les* *erreurs*
 > 
 >**FINALISATION**
+> 
 > *-* *Tester* *le* *programme*
 >
 > *-* *Rédiger* *une* *documentation*
