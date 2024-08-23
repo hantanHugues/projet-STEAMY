@@ -439,8 +439,8 @@ if (digitalRead(button_1)== HIGH && q==1 ){
 ```
 > La fonction defaut() ci dessus implémente le comportement du robot en
 > fonction de la valeur de retour du button_1 lorsqu’un defaut est
-> repéré. Il fait clignoter la led RGB lorsque l’alarme est en cour
-> depuis plus 4 minutes et fait sonner le buzzer au bout de 3 minute
+> repéré. Il appelle la fonction IRcaptor() pour  clignoter la led RGB lorsque l’alarme est en cour
+> depuis plus de 4 minutes et fait sonner le buzzer au bout de 3 minute
 > après l’etat de defaut grace a la valeur de retour de la fonction
 > defaut qui sexécute.
 ```
@@ -476,8 +476,8 @@ uint16_t IRcaptor(){ // gère la reception des signaux par le capteur infra roug
 > protocole NEC ou pas si ce n’est pas le cas il envoie les données
 > brutes du signale (le temps de signale pour chaque impulsion de l’IR )
 > ce qui permet de visualiser les signaux brutes reçus. Dans le cas
-> contraire il affiche le signale reçue dans le moniteur série il
-> renvoie a la fin la valeur du signale reçue.
+> contraire il affiche le signale reçue dans le moniteur série
+> Il fait clignoté la led RGB lorsqu'un signale est reçu.
 ```
 
 void runing(){
