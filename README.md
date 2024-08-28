@@ -178,7 +178,7 @@ style="width:7.08681in;height:4.95486in" />
 > une action bien précise. Ces fonctions sont ensuite appelées dans
 > d’autres fonctions ou appelées dans la boucle loop().
 
-```
+```C++
 #include <DHT.h>
 #include <IRremote.h>
 #include <Wire.h>
@@ -196,7 +196,7 @@ style="width:7.08681in;height:4.95486in" />
 >
 > \- LiquidCrystal_I2C.h est utilisé pour permettre l’affichage sur
 > l’écran LCD.
-```
+```C++
 #define led_red 11
 #define led_green 12
 #define button_1 13
@@ -217,7 +217,7 @@ style="width:7.08681in;height:4.95486in" />
 > Ici nous avons définis les différents pines des materieux en leur
 > assigant une appellation plus pratique pour facilement les
 > différencier.
-```
+```C++
 LiquidCrystal_I2C lcd(0x27,16,2);
 DHT dht(DHTPIN , DHTTYPE);
 IRrecv Irrecv(IRpin);
@@ -227,7 +227,7 @@ IRrecv Irrecv(IRpin);
 > controler l’écran LCD, DHT pour lire les données de température et
 > d’humidité et IRrecv pour recevoir les signaux infrarouge à partir de
 > la télécommande.
-```
+```C++
 bool shut_down = 0; //variable pour signaler l'arret du fonctionnement 
 int q=1;// variable qui signale un defaut 
 String error= "defaut"; //affiche un message derreur en cas de defaut 
@@ -239,7 +239,7 @@ uint16_t received2 = 0;
 ```
 > Ici nous définissons quelques variables qui vont etre utilisées plus
 > tard dans le code.
-```
+```C++
 float get_distance( ) {// cette fonction lis la distance grâce au capteur ultra sonic 
   digitalWrite(trig_pin, LOW);
   digitalWrite(trig_pin, HIGH);
@@ -253,7 +253,7 @@ float get_distance( ) {// cette fonction lis la distance grâce au capteur ultra
 > Cette fonction get_distance permet de calculer la distance a laquelle
 > se trouve un objet en fonction des valeurs de retour du capteur
 > ultrason.
-```
+```C++
 void setColor( int red_value, int green_value, int blue_value){ //modifier les couleurs de la led RGB
   analogWrite(GRB_red, red_value);
   analogWrite(GRB_green, green_value);
@@ -266,7 +266,7 @@ void setColor( int red_value, int green_value, int blue_value){ //modifier les c
 > pour chaque variable qu’elle prend en entrée et allume une couleur en
 > fonction de la combinaison des valeurs reçues, chaque variable
 > correspond a l’allumage d’une couleur.
-```
+```C++
 bool mesDist(){  //affiche un message et allume la led RGB en fonction de la distance obtenue par le capteur ultra son 
   
     lcd.backlight();
@@ -313,7 +313,7 @@ bool mesDist(){  //affiche un message et allume la led RGB en fonction de la di
 > get_distance et de l’afficher sur l’écrant LCD. IL permet également
 > d’allumer la led GRB sur une couleur grace a la fonction setColor en
 > fonction de la distance a la quelle se trouve l’obstacle.
-```
+```C++
 void button(){ //fonction pour gérer le fonctionnement du boutton 2 pour eteindre ou redémarrer le système
   int etat_button = digitalRead(button_2);
   unsigned long dure_appuis = 0;
@@ -354,7 +354,7 @@ void button(){ //fonction pour gérer le fonctionnement du boutton 2 pour eteind
 > dois éteindre le systhème en cas d’appuis long et le redémarrer dans
 > le cas d’appuis court pour fonctionner il fait appelle à différentes
 > fonctions dont nous n’avons pas encore parlé
-```
+```C++
 unsigned long  defaut_lumiere(){ //gère la detection de defaut lummineux
  int light_value= analogRead(light_sensor);
  //Serial.println(light_value);
@@ -377,7 +377,7 @@ unsigned long  defaut_lumiere(){ //gère la detection de defaut lummineux
 > seuille.
 >
 > Il renvoie une sauvegarde du temps auquel le défaut s’est enclenché.
-```
+```C++
 unsigned long  defaut_humidite(){//gère la detrection de defaut par rapport a l'humidité
   float humidite = dht.readHumidity();
   float temperature = dht.readTemperature();
@@ -402,7 +402,7 @@ unsigned long  defaut_humidite(){//gère la detrection de defaut par rapport a 
 ```
 > Cette fonction defaut_humidite fait exactement la même chose que la
 > précédente main dans le cas de l’humidité.
-```
+```C++
 void defaut(unsigned long time_var ){ //gère le comportement de l'appareii en cas de detection d'un defaut 
 if (digitalRead(button_1)== HIGH && q==1 ){
   setColor(0, 0, 0);
@@ -443,7 +443,7 @@ if (digitalRead(button_1)== HIGH && q==1 ){
 > depuis plus de 4 minutes et fait sonner le buzzer au bout de 3 minute
 > après l’etat de defaut grace a la valeur de retour de la fonction
 > defaut qui sexécute.
-```
+```C++
 uint16_t IRcaptor(){ // gère la reception des signaux par le capteur infra rouge 
     uint16_t received = 0;
     if(IrReceiver.decode()){
@@ -478,7 +478,7 @@ uint16_t IRcaptor(){ // gère la reception des signaux par le capteur infra roug
 > ce qui permet de visualiser les signaux brutes reçus. Dans le cas
 > contraire il affiche le signale reçue dans le moniteur série
 > Il fait clignoté la led RGB lorsqu'un signale est reçu.
-```
+```C++
 
 void runing(){
     while(run){
@@ -493,7 +493,7 @@ button();
 ```
 > Cette fonction est une boucle dans laquelle est appelée certaines des
 > fonctions précédentes lorsque la variable run est vrai.
-```
+```C++
 void setup() {  
 pinMode(led_green , OUTPUT);
 pinMode (led_red , OUTPUT);
@@ -520,7 +520,7 @@ lcd.clear();
 ```
 > Il s’agit de la fonction d’initialisation setup() ou les differents
 > pines sont configurées et ou les différents capteurs son initialisés.
-```
+```C++
 void loop() {
   // appelle des differents fonctions
       if(digitalRead(button_1)== LOW){
